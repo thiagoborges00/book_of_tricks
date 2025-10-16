@@ -1,0 +1,19 @@
+criando ambiente e executando testes funcionais
+
+- clonar projeto
+- mudar para uma branch de preferência (v29.1)
+- instalar deps
+- criar ambiente virtual python (3.11)
+- mkdir build
+
+{
+// comando alternativo
+cmake -B build -DBUILD_GUI=OFF -DBUILD_TESTS=ON
+
+cmake --build build
+
+}
+
+- cd build; cmake .. -DCMAKE_BUILD_TYPE=Release
+- make -j$(nproc) #8
+- ./build/test/functional/test_runner.py
